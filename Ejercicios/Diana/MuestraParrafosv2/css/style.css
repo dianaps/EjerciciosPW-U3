@@ -1,0 +1,50 @@
+@import url(../../../../css/menu.css);
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    padding: 2%;
+}
+
+p{
+    margin-bottom: 0;
+    border-radius: 2%;
+}
+
+div{
+    margin-bottom: 2%;
+    border-radius: 2%;
+}
+
+#div_1{
+    background-color: rgba(125, 143, 125, 0.555);
+}
+
+#div_2{
+    background-color: rgba(226, 57, 57, 0.555);
+}
+
+#div_3{
+    background-color: rgba(24, 165, 170, 0.555);
+}
+
+#contenidos_1/*.abierto*/{
+    background-color: rgba(125, 143, 125, 0.836);
+}
+
+#contenidos_2{
+    background-color: rgba(226, 57, 57, 0.836);
+}
+
+#contenidos_3{
+    background-color: rgba(24, 165, 170, 0.836);
+}
+
+a{
+    font-size: large;
+    color: rgb(0, 0, 0);
+}
+
+a:hover{
+    font-size: x-large;
+    color: rgb(14, 97, 93);
+}

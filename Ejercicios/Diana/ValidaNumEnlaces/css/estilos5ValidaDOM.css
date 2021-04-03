@@ -1,0 +1,32 @@
+@import url(../../../../css/menu.css);
+body {
+  margin:0;
+}
+
+p{
+  margin: 10px;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bolder;
+  color:rgb(2, 43, 77);
+}
+
+#informacion{
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  position:relative;
+  bottom: 0;
+  background-color: rgb(170, 225, 247);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: .3%;
+  display: inline-block;
+  float: inline-end;
+}

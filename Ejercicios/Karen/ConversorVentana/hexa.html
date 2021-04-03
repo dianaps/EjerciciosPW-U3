@@ -1,0 +1,61 @@
+<!DOCTYPE >
+<head>
+   <title>CONVIERTE A HEXADECIMAL</title>  
+
+</head>  
+<body>
+   <h1>Conversor de decimal a hexadecimal</h1>
+   <form >
+      <label for="n">Introduce el n&uacute;mero en decimal</label>
+      <input type="text" id="n" name="numero" value="">
+      <button type="button" onclick="hexadecimal(numero.value)">Hexadecimal</button>
+      <button type="button" onclick="limpiarTodo()">Limpiar todo</button>
+   </form>
+
+   <script type="text/javascript">
+
+   function hexadecimal(numero) {
+      if (isNaN(numero))
+         alert("El valor ingresado no es un número");
+      else{
+         var resultado="";
+         var n=numero-(numero%1);
+         while(n!=0){
+            resultado+=(n%16==10?"A":n%16==11? "B":n%16==12? "C":n%16==13?"D":n%16==14?"E":n%16==15?"F":""+n%16);
+            n/=16;
+            n= Math.trunc(n);
+         }
+         resultado=invertirCadena(resultado);
+         nuevo(numero,"hexadecimal",resultado);
+      }
+   }
+
+   function limpiarTodo(){
+      var lista=document.querySelectorAll('p');
+      if(lista.length!=0){
+        i=lista.length-1;  // posiciona en el último párrafo creado
+        while(i>-1)
+             lista[i].parentNode.removeChild(lista[i--]);
+      }
+      else alert("No hay párrafos para eliminar");
+   }
+
+   function nuevo(numero,mensaje,resultado){
+      var parrafo = document.createElement("p");
+      var contenido = document.createTextNode("El número "+numero+" en "+mensaje+" es "+resultado);  
+      parrafo.appendChild(contenido);
+      document.body.appendChild(parrafo);
+   }
+
+   function invertirCadena(cadena){
+      var cadenaInversa="";
+      for(var i=cadena.length-1; i>=0; i--){
+         cadenaInversa+= cadena.charAt(i);
+      }
+      return cadenaInversa;
+   }
+
+   </script>
+
+</body>
+</html>

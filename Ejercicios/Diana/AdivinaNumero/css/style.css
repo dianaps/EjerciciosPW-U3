@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url(../../../../css/menu.css); 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: blanchedalmond;
+    background-image: url("../img/fondo2.jpg");
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.header, .form, .text, .resultParas, .p1, .p2, .p3{
+    padding: 3px;
+    margin: 10px auto;
+    border-radius: 8px;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+hr{
+    margin: 30px;
+    border-style: dotted none none;
+    border-color: rgb(0, 0, 0);
+    height: 1px;
+    width: 90%;
+    border-width: 10px;
+}
+
+.header{
+    background-color: rgb(255, 235, 205);
+    text-align: center;
+}
+
+.form #campoAdivina{
+    border: 1px solid #ebebeb;
+    height: 25px;
+    width: 80px;
+    border-radius: 8px;
+}
+
+.form .adivinaSubmit, #reset{
+    background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#000000;
+    border: none;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'Arial', sans-serif;
+    font-size: medium;
+	font-weight:bolder;
+	text-decoration:none;
+	text-shadow:0 1px 0 #535b5e;
+}
+
+.form .adivinaSubmit:hover, #reset:hover{
+    background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+
+.ultimoResultado {
+    color: blanchedalmond;
+    padding: 3px;
+}
+
+
+.resultParas{
+    background-color:unset;
+    margin: .5px auto;
+    display: none;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE >
+<head>
+<title>Funciones básicas</title>  
+
+</head>  
+<body>
+
+  <h1>Programa que convierte de decimal a hexadecimal</h1>
+  <form >
+     <label >Introduce el numero en decimal</label>
+     <input type="text"   id="num" name="numero" value="">
+     <!--
+       <button type="button" onclick="esPar(numero.value)">Verificar</button>
+     -->
+     <button type="button" onclick="hex(num.value)">Calcular</button>
+     <button type="button" onclick="limpiar()">Limpiar Todos</button>
+     <input type="button" onClick="cierra();" value="Cerrar"/>
+
+  </form>
+
+  <script type="text/javascript">
+    function limpiar(){
+    lista=document.querySelectorAll('p');
+
+    if(lista.length!=0){
+        i=lista.length-1;  // posiciona en el último párrafo creado
+        while(i>-1)
+             lista[i].parentNode.removeChild(lista[i--]);
+    }
+    else alert("No hay parrafos a eliminar");
+  }
+
+   function hex(numero){
+     var resultado = esHex(numero);
+     parrafo = document.createElement("p");
+     contenido = document.createTextNode("El numero "+numero+" en Hexadecimal seria "+resultado);
+     parrafo.appendChild(contenido);
+     document.body.appendChild(parrafo);
+     document.getElementById("num").value="";
+   }
+
+    function esHex(numero){
+        var hexa=[], i;
+        for(i=numero; i>0; i=parseInt(i/16)){
+          hexa.push(i%16);
+        }
+        for(i=0; i<hexa.length; i++){
+          switch (hexa[i]){
+            case 10: hexa[i]="A";
+            break;
+            case 11: hexa[i]="B";
+            break;
+            case 12: hexa[i]="C";
+            break;
+            case 13: hexa[i]="D";
+            break;
+            case 14: hexa[i]="E";
+            break;
+            case 15: hexa[i]="F";
+            break;
+          }
+        }
+        return hexa.reverse().join("");
+      }
+
+      function cierra(){
+    		if (confirm("¿Quieres cerrar la ventana?")){
+    			window.close();
+    		}
+      }
+</script>
+</body>
+</html>

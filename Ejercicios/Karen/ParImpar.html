@@ -1,0 +1,72 @@
+<!DOCTYPE >
+<head>
+<title>Funciones básicas</title>  
+<link rel="stylesheet" href="../../css/menu.css">
+</head>  
+<body>
+   <div id="menu-principal">
+      <ul>
+        <li><a class="active icon-calc" href="../../Calculadora/index.html">Calculadora</a></li>
+        <li class="dropdown">
+          <a  class="dropbtn icon-user">Karen</a>
+          <div class="dropdown-content">
+            <a href="../../Ejercicios/Karen/ParImpar.html">Par Impar</a>
+            <a href="../../Ejercicios/Karen/Binario_Hexa/Conversiones.html">Conversor a binario y hexadecimal</a>
+            <a href="../../Ejercicios/Karen/ConversorVentana/conversor.html">Conversor que abre ventanas</a>
+            <a href="../../Ejercicios/Karen/5.-ExamnTablasMultiplicar/ex_multiplicar.html">Examen multiplicar</a>
+            <a href="../../Ejercicios/Karen/ZodiacoinnerHTML/index.html">Zodiaco</a>
+            <a href="../../Ejercicios/Karen/1.-valida5DOMNumeroEnlaces.html">Valida número de enlaces</a>
+            <a href="../../Ejercicios/Karen/2.-Muestra-OcultaParrafos-v2 (1).html">Muestra Párrafos</a>
+            <a href="../../Ejercicios/Karen/AdivinaNumero.html">Adivina número</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a  class="dropbtn icon-user">Carlos</a>
+          <div class="dropdown-content">
+            <a href="../../Ejercicios/Carlos/parimpar.html">Par Impar</a>
+            <a href="../../Ejercicios/Carlos/Unidades.html">Conversor a binario y hexadecimal</a>
+            <a href="../../Ejercicios/Carlos/Conversiones/abrenueva.html">Conversor que abre ventanas</a>
+            <a href="../../Ejercicios/Carlos/5.-ExamnTablasMult/ex_multiplicar.html">Examen multiplicar</a>
+            <a href="../../Ejercicios/Carlos/ZodiacoinnerHTML/Zodiaco.html">Zodiaco</a>
+            <a href="../../Ejercicios/Carlos/1.-ValidaDOMNumeroEnlaces/NumEnlaces.html">Valida número de enlaces</a>
+            <a href="../../Ejercicios/Carlos/MuestraOcultaParrafosV2.html">Muestra Párrafos</a>
+            <a href="../../Ejercicios/Carlos/AdivinaNum.html">Adivina número</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a  class="dropbtn icon-user">Diana</a>
+          <div class="dropdown-content">
+            <a href="../../Ejercicios/Diana/ParImpar/index.html">Par Impar</a>
+            <a href="../../Ejercicios/Diana/Conversor/index.html">Conversor a binario y hexadecimal</a>
+            <a href="../../Ejercicios/Diana/ConversorVentana/index.html">Conversor que abre ventanas</a>
+            <a href="../../Ejercicios/Diana/Ex-Multiplicar/index.html">Examen multiplicar</a>
+            <a href="../../Ejercicios/Diana/Zodiaco/index.html">Zodiaco</a>
+            <a href="../../Ejercicios/Diana/ValidaNumEnlaces/index.html">Valida número de enlaces</a>
+            <a href="../../Ejercicios/Diana/MuestraParrafosv2/index.html">Muestra Párrafos</a>
+            <a href="../../Ejercicios/Diana/AdivinaNumero/index.html">Adivina número</a>
+          </div>
+        </li>
+        <li class="last"><a class="active" href="/index.html">Inicio</a></li>
+      </ul>
+    </div>
+  <h1>Programa que verifica si un n&uacute;mero es par</h1>
+  <form >
+     <label >Introduce el numero</label>
+     <input type="text" name="numero" value="">
+     <button type="button" onclick="esPar(numero.value)">Verificar</button>
+     //TAREA:Investigar como hacer para enviar el valor de input text a la funcion esPar
+  </form>
+
+<script type="text/javascript">
+    function esPar(numero){
+       var resultado = parImpar(numero);
+       alert("El número "+numero+" es "+resultado);  
+    }
+
+function parImpar(numero) {
+      if(numero % 2 == 0)  return "par";
+      else return "impar";
+ }
+</script>
+</body>
+</html>

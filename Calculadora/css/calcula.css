@@ -1,0 +1,113 @@
+@import url(../../css/menu.css);
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
+#textoPantalla { width: 500px; border: 2px black solid; text-align: right;
+                 position: relative; left: 30px;  padding: 5px 5px;
+                 background-color: white; font-family: "courier new";
+                 overflow: hidden;}
+
+/*botones normales: anchura y margen*/
+.calculadora [type=button] { width: 60px;height: 60px; padding: 0;  }
+/*botones especiales*/
+.calculadora input.largo { color:#ffff; width: 100px; }
+.calculadora input.ex {margin-left: 20px; color:#ffff; }
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+}
+
+/*aspectos generales: bordes y color de fondo de calculadora*/
+.calculadora {
+    width: 800px;/**/
+    align-items: center;
+    text-align: center;
+    margin: 50px auto;
+    background-color: #eeeeee;
+    padding: 3.5%;
+    border-radius: 12px;
+    box-shadow: 5px 8px 8px #323232;
+}
+
+/*pantalla de visualización: bordes, posición, color de fondo, estilo letra.*/
+#textoPantalla {
+    text-align: right;
+    background-color: white;
+    font-size: larger;
+    overflow: hidden;
+    width: 98.5%;
+    height: 70px;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/*botones normales: anchura y margen*/
+.calculadora [type=button] {
+    width: 95px;
+    padding: 0;
+    cursor: pointer;
+    background-color: #393e46;
+    color: white;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: arial,sans-serif;
+    text-align: center;
+    line-height: 34px;
+}
+.calculadora [type=button]:hover {
+    background: #595d64;
+    border:#595d64;
+    box-shadow: 0 4px #1c1e22;
+}
+
+/*botones especiales*/
+.calculadora input.largo {
+    color:white;
+    background-color: #00adb5;
+    width: 120px;
+}
+.calculadora input.largo:hover {
+    background-color: #23ccd4;
+    border:#23ccd4;
+    box-shadow: 0 4px #057177;
+}
+/*botones zona calculadora científica*/
+.calculadora input.cientifica {
+    color: white;
+    background-color: #222831;
+}
+
+.calculadora input.cientifica {
+    color: white;
+    background-color: #222831;
+}
+
+.calculadora input.cientifica:hover {
+    background-color: #333a46;
+    border:#333a46;
+    box-shadow: 0 4px #161a20;
+}
+
+#igual{
+    background: #4285f4;
+    color: #fff;
+}
+#igual:hover{
+    background: #5c95f1;
+    border:#5c95f1;
+    box-shadow: 0 4px #256bdb;
+}
+
+@media only screen and (max-width: 768px) {
+    .calculadora{
+        width: 100%;
+        height: 100%;
+        padding: auto;
+    }
+    p, button{
+        display: inline;
+    }
+
+}

@@ -1,0 +1,90 @@
+@import url(fontello.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+
+#menu-principal{
+    width: 100% !important;
+    height: 50px !important; 
+    background: #333;
+    color: #fff !important;
+    position:fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateY(-95%);
+    /**/
+    font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+.na{
+    transform: translateY(0%) !important;
+}
+
+#menu-principal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #181818;
+}
+
+#menu-principal li {
+    cursor: pointer;
+    float: left;
+}
+
+#menu-principal li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: larger;
+    text-decoration: none;
+}
+
+#menu-principal li a:hover, .dropdown:hover .dropbtn {
+    background-color: #069df562;
+    
+}
+
+#menu-principal li.dropdown {
+    display: inline-block;
+}
+
+#menu-principal .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+#menu-principal .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+#menu-principal .dropdown-content a:hover {
+    background-color: #70696962
+}
+
+#menu-principal .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#menu-principal:hover{
+    transform: translateY(0%);
+}
+
+#menu-principal .active{
+    background-color: #1ea3f0c4;
+    font-weight: bolder;
+}
+
+#menu-principal li.last{
+    float: right;
+}

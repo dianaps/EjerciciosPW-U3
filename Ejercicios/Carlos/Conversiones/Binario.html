@@ -1,0 +1,61 @@
+<!DOCTYPE >
+<head>
+<title>Funciones básicas</title>  
+
+</head>  
+<body>
+
+  <h1>Programa que convierte de decimal a binario</h1>
+  <form >
+     <label >Introduce el numero en decimal</label>
+     <input type="text"   id="num" name="numero" value="">
+     <!--
+       <button type="button" onclick="esPar(numero.value)">Verificar</button>
+     -->
+     <button type="button" onclick="bin(num.value)">Calcular</button>
+     <button type="button" onclick="limpiar()">Limpiar Todos</button>
+     <input type="button" onClick="cierra();" value="Cerrar"/>
+
+  </form>
+
+  <script type="text/javascript">
+    function limpiar(){
+    lista=document.querySelectorAll('p');
+
+    if(lista.length!=0){
+        i=lista.length-1;  // posiciona en el último párrafo creado
+        while(i>-1)
+             lista[i].parentNode.removeChild(lista[i--]);
+    }
+    else alert("No hay parrafos a eliminar");
+  }
+   function bin(numero){
+     var resultado = esBinario(numero);
+     parrafo = document.createElement("p");
+     contenido = document.createTextNode("El numero "+numero+" en Binario seria "+resultado);
+     parrafo.appendChild(contenido);
+     document.body.appendChild(parrafo);
+     document.getElementById("num").value="";
+   }
+
+
+   function esBinario(numero){
+     var r="";
+     var n= parseInt(numero,10);
+     while(n!=0){
+       res=n%2;
+       n=Math.trunc(n/2);
+       r=""+res+r;
+     }
+     return r;
+   }
+
+   function cierra(){
+ 		if (confirm("¿Quieres cerrar la ventana?")){
+ 			window.close();
+ 		}
+  }
+
+</script>
+</body>
+</html>

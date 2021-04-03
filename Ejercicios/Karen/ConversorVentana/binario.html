@@ -1,0 +1,61 @@
+<!DOCTYPE >
+<head>
+   <title>CONVIERTE A BINARIO</title>  
+
+</head>  
+<body>
+   <h1>Conversor de decimal a binario</h1>
+   <form >
+      <label for="n">Introduce el n&uacute;mero en decimal</label>
+      <input type="text" id="n" name="numero" value="">
+      <button type="button" onclick="binario(numero.value)">Binario</button>
+      <button type="button" onclick="limpiarTodo()">Limpiar todo</button>
+   </form>
+
+   <script type="text/javascript">
+   function binario(numero){
+      if (isNaN(numero))
+         alert("El valor ingresado no es un número");
+      else{
+         var resultado="";
+         var num=numero-(numero%1);
+         while (num/2 != 0){
+            resultado += num % 2 + "";
+            num /= 2;
+            //num= Math.trunc(num);
+            num=num-(num%1);
+         }
+         resultado=invertirCadena(resultado);
+         nuevo(numero,"binario",resultado);
+      }
+   }
+
+   function limpiarTodo(){
+      var lista=document.querySelectorAll('p');
+      if(lista.length!=0){
+        i=lista.length-1;  // posiciona en el último párrafo creado
+        while(i>-1)
+             lista[i].parentNode.removeChild(lista[i--]);
+      }
+      else alert("No hay párrafos para eliminar");
+   }
+
+   function nuevo(numero,mensaje,resultado){
+      var parrafo = document.createElement("p");
+      var contenido = document.createTextNode("El número "+numero+" en "+mensaje+" es "+resultado);  
+      parrafo.appendChild(contenido);
+      document.body.appendChild(parrafo);
+   }
+
+   function invertirCadena(cadena){
+      var cadenaInversa="";
+      for(var i=cadena.length-1; i>=0; i--){
+         cadenaInversa+= cadena.charAt(i);
+      }
+      return cadenaInversa;
+   }
+
+   </script>
+
+</body>
+</html>
